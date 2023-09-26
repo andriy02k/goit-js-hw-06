@@ -8,7 +8,10 @@ const ingredients = [
 ];
 
 const list = document.querySelector("#ingredients");
-const markup = ingredients.map((ingredient) => {
+
+const markup = [];
+
+ingredients.forEach((ingredient) => {
   const li = document.createElement("li");
   const p = document.createElement("p");
 
@@ -16,7 +19,7 @@ const markup = ingredients.map((ingredient) => {
 
   li.append(p);
 
-  return li;
+  markup.push(li);
 });
 
 list.append(...markup);
