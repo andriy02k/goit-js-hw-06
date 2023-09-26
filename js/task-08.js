@@ -16,10 +16,11 @@ function handlerSubmit(evt) {
     //     }
 
     //     console.log(data);
-
-        
     // }
-    if (input.value === "") {
+    const emailInput = form.elements.email;
+    const passwordInput = form.elements.password;
+
+    if (emailInput.value === "" || passwordInput.value === "") {
         alert('Усі поля повинні бути заповнені!')
     } else {
         const formData = new FormData(evt.currentTarget);
